@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Source+Sans+3:wght@300&display=swap');
+
+.App {
+  background-color: #EFFAFD;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #08043c;
+  text-align: center;
+}
+
+.App-header{
+  width: 100%;
+  background: linear-gradient(-45deg, #a8d0e6, #89c4f4, #b2f7ef, #d9faff);
+  background-size: 200% 200%;
+	animation: gradient 8s ease infinite;
+}
+
+header{
+  padding: 4vw;
+}
+
+.App-header button {
+  padding: 15px 25px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(12px, 2.5vw, 30px); 
+  font-weight: 700; 
+  box-shadow: 0 4px 8px rgba(35, 35, 35, 0.04);
+  letter-spacing: 1.5px; 
+}
+
+.App-header button:hover {
+  background-color: transparent;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0);
+  letter-spacing: 2px; 
+  transform: translateY(-2px);
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.App-header h1 {
+  font-weight: 700;
+  font-size: 10vw; 
+  padding: 1vw;
+}
+
+.App-header svg {
+  display: block;
+
+}
+
+.App-info {
+  width: 60%;
+}
+
+.App-info div {
+  padding: 10px;
+}
+
+.App-info div h1 {
+  font-weight: 500;
+  font-size: clamp(16px, 2vw, 32px); 
+}
+
+
+.App-info div p {
+  font-weight: 300;
+  font-size: clamp(10px, 1.5vw, 15px); 
+}
+
+.App-predictor-title {
+  width: 60%;
+  padding-top: 4vw;
+}
+
+.App-predictor-title div {
+  padding: 10px;
+}
+
+.App-predictor-title div h1 {
+  font-weight: 500;
+  font-size: clamp(20px, 3vw, 42px); 
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 80%;
+  margin: auto;
+  background-image: url(../public/plane.png);
+  background-repeat: no-repeat;
+  background-size: 40vw;
+  background-position: 95% 50%;
+  min-height: 50vw;
+  padding: 20px;
+  animation: floatBackground 3s ease-in-out infinite;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 25vw;
+}
+
+.form-group select option {
+  font-weight: 400;
+}
+
+.form-group select, .form-group .form-control {
+  padding: 1.5vw;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border-radius: 0.5vw;
+  font-size: clamp(10px, 2vw, 40px);
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #08043c;
+  border: 1px #EFFAFD;
+  transition: 0.2s;
+  width: 100%;
+
+}
+
+.form-group select:hover, .form-group .form-control:hover {
+  background-color: #dcf6fc;
+}
+
+.form-group select:focus, .form-group .form-control:focus {
+  border: 1px solid #08043c; 
+  outline:none;
+}
+
+.react-datepicker {
+  font-weight: 500;
+}
+
+.form-group button {
+  padding: 13px 20px;
+  background-color: #08043c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(10px, 2vw, 40px);
+  font-weight: 400;
+
+}
+
+.form-group button:hover {
+  background-color: #160f79;
+}
+
+.App-closing {
+  width: 60%;
+  padding: 3vw;
+}
+
+.App-closing div {
+  padding: 10px;
+}
+
+.App-closing div p {
+  font-weight: 400;
+  font-size: clamp(10px,1.5vw, 25px);
+  padding: 2vw; 
+}
+
+.App-result {
+  width: 60%;
+  padding: 3vw;
+}
+
+.App-result div {
+  padding: 10px;
+}
+
+.App-result div h1 {
+  font-weight: 500;
+  font-size: clamp(20px, 3vw, 42px); 
+}
+
+@keyframes floatBackground {
+  0%, 100% {
+    background-position: 95% 50%;
+  }
+  50% {
+    background-position: 95% 48%; /* Slightly moves up */
+  }
+}
